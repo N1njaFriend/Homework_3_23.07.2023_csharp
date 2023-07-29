@@ -6,14 +6,14 @@
 int num = 0;
 bool isValidInput = false;
 
-while (!isValidInput || num < 10000 || num > 99999)
+while (num < 10000 || num > 99999)
 {
     Console.Write("Введите пятизначное число: ");
     isValidInput = int.TryParse(Console.ReadLine(), out num);
 
-    if (!isValidInput || num < 10000 || num > 99999)
+    if (isValidInput)
     {
-        Console.WriteLine("Число не пятизначное!");
+        Console.WriteLine("Это не пятизначное число!");
     }
 }
 
